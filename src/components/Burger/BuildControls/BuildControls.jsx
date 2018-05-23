@@ -28,6 +28,9 @@ const buildControls = props => {
           />
         );
       })}
+      <button className={styles.OrderButton} disabled={!props.allowPurchase}>
+        ORDER NOW
+      </button>
     </div>
   );
 };
