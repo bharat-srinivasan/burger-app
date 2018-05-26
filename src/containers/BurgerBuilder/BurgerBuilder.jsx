@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Aux from "../../hoc/Aux";
+import Aux from "../../hoc/Aux/Aux";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -43,7 +43,6 @@ class BurgerBuilder extends Component {
     const updatedIngredients = { ...this.state.ingredients };
     updatedIngredients[type] = updatedIngredients[type] + 1;
     const updatedTotalPrice = this.state.totalPrice + INGREDIENT_PRICES[type];
-    console.log(updatedTotalPrice);
     this.setState({
       ingredients: updatedIngredients,
       totalPrice: updatedTotalPrice
